@@ -12,8 +12,18 @@ Restrição: numpy só pode ser usado para criar arrays (np.array, np.eye, np.ze
 Todas as operações são feitas com laços explícitos.
 """
 
-import numpy as np
+"""
+Função implementada no código: resolve_lu que resolve o sistema Ax = b
+Subfunções:
+1) decomposição_lu que fatora a matriz A em duas matrizes, L triangular inferior 
+e U triangular superior, sem pivoteamento.
+2) substituicao_progressiva que resolve o sistema Ly = b.
+3) substituicao_regressiva que resolve o sistema Ux = y.
+4) _vetor_b que trata o vetor b em diferentes formatos.
+"""
 
+
+import numpy as np
 
 def decomposicao_lu(A, tol=1e-12):
     """Fatora A = LU por eliminação de Gauss, sem pivoteamento.
